@@ -1,0 +1,75 @@
+		      Controle de Eventos
+	  		Os sem Floresta
+O objetivo do nosso projeto é propor um serviço de agendamento de espaços
+reservados para acampamento as familias interessadas, no nosso site eles 
+poderão conhecer as áreas, escolher o local que desejam e efetuar o paga
+mento. Para melhor compreensão das ideias, teremos as seguintes telas:
+
+
+PRIMEIRA TELA: Inicial
+
+	Nav Itens (inicial, sobre, agendamento, equipe)
+	Carrousel (fundo de um campo rural)
+	Todos os nossos espaços organizados em linhas, ex:
+	Fazenda Soares(nome)
+	Foto do local
+	Descrição prévia(essa deve conter espaço do local e redirecionar
+o cliente para tela sobre caso queira saber mais)
+
+SEGUNDA TELA: Sobre(espaços)
+	
+	Nav Itens (inicial, sobre, agendamento, equipe)
+	Carrousel (fundo de um campo rural)
+	Espaço1
+	Espaço2
+	Espaço3
+	(Nessa tela os espaços devem ser descritos por completo, contendo a 
+história e o LEGADO do local, além de dados como imagens, preservação e etc)
+
+
+TERCEIRA TELA: Agendamento
+	
+	(SEGUIREMOS O EXEMPLO DO AIRBNB https://www.airbnb.com.br/)
+	Nav Itens (inicial, sobre, agendamento, equipe)
+	Sem carroussel
+	Espaço 1 (imagem, preço, endereço, avaliação) Espaço 2 (imagem, preço, endereço, avaliação)
+	Espaço 3 (imagem, preço, endereço, avaliação) Espaço 4 (imagem, preço, endereço, avaliação)
+
+TELA: Vendas do espaço
+	
+	(EXEMPLO AIRBNB)
+	Esta tela por sua vez não estará visível na tela inicio, pois haverá uma tela para CADA
+espaço, e só será acessada CASO o cliente busque saber mais sobre o agendaento de cada lugar.
+	Espaço descrito (imagens, cômodos, avaliação, o que o local oferece, dias disponíveis,
+Salvar(opcional) e preço
+
+TELA: Tela de Vendas
+	
+	Assim como a quarta tela, esta só vísivel quando o cliente for efetuar o pagamento, nela será
+feita a ligação com o banco de dados, para venda e ingressos)
+	(COMPLETAR)
+
+QUARTA TELA: Equipe
+
+	Nav Itens (inicial, sobre, agendamento, equipe)
+	Carrousel (fundo de um campo rural)
+	Texto sobre os nossos serviços e quem somos
+	Rede social da nossa equipe
+
+
+Questões a serem resolvidas e dúvidas dos meus colegas boçais:
+	O nosso site irá conter 4 telas primordialmente, estas que por sua vez serão vistas
+na nav das telas, porém telas como a de vendas do espaço e tela de vendas serão feitas 1 pra 
+cada espaço e serão acessadas caso o cliente se interesse pelo lugar. Tambem devemos fazer nelas
+a ligação com o banco de dados.
+	Caso nós estejamos com MUITA vontade de trabalhar, podemos fazer uma tela futura de salvos,
+onde quanto o cliente favoritar um espaço ele poderá ve-lo na tela de favoritos( como descrito na 
+tela vendas do espaço)
+
+
+Por onde começamos:
+	Quantos espaços teremos e definir o nome deles (minha ideia 15)
+	Seleção de imagens dos espaços (1/3 por cada espaço, contendo areas de lazer que nele contem)
+	Produção dos textos(podemos utilizar o chat gpt)
+	Criar uma rede social para a equipe (abobrinha pra ganhar mais nota)
+	

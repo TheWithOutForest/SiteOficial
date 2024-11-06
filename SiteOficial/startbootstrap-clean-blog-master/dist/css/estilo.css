@@ -1,0 +1,20 @@
+.imginicio{
+    padding-top: 3%;
+    align-items: center;
+    width: 850px;
+    padding-right: 20%;
+} 
+.post-subtitle2{
+    font-weight: 250;
+    margin-bottom: 0.625rem;
+    padding-top: 30px;
+    font-size: 25px;
+}
+
+.post-subtitle3{
+    font-weight: 250;
+    margin-bottom: 0.625rem;
+    padding-top: 5px;
+    font-size: 25px;
+    padding-right: 35%;
+}
