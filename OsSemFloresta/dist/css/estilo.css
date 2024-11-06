@@ -1,0 +1,29 @@
+.imginicio{
+    align-items: center;
+    width: 730px;
+    transition: transform 0.6s ease, box-shadow 0.5s ease; /* Faz uma transição suave */
+    cursor: pointer; /* Muda o cursor ao passar o mouse */
+    display: block;
+} 
+.imginicio:hover {
+    transform: scale(1.05); /* Aumenta 10% da escala original */
+    box-shadow: 12px 12px 20px rgba(0, 0, 0, 0.3);
+  }
+.post-subtitle2{
+    font-weight: 400;
+    margin-bottom: 0.625rem;
+    padding-top: 30px;
+    font-size: 25px;
+}
+
+.post-subtitle3{
+    font-weight: 250;
+    margin-bottom: 0.625rem;
+    padding-top: 5px;
+    font-size: 25px;
+    padding-right: 35%;
+}
+
+.post-title5{
+    padding-top: 14%;
+}
