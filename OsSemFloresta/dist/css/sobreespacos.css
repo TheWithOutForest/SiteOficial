@@ -1,0 +1,54 @@
+.img_logo{
+    width: 25%;
+}
+
+.cor_menu{
+    background-color: brown;
+}
+
+.espaço-baixo{
+    padding-top: 5%;
+    padding-left: 8%;
+}
+
+.espaço-cima{
+    margin-top: 3%;
+}
+
+.espaço-titulo{
+    padding-top: 2%;
+}
+
+.txt1{
+    padding-top: 1%;
+}
+
+section{
+    padding: 1%;
+    margin: 8%; 
+    border-radius: 10PX;
+    box-shadow: 16px 16px 11px rgba(29, 29, 29, 0.39)
+}
+
+.img-quadrinhos{
+    width: 100%;
+    text-align: center;
+}
+
+.color{
+    background-color: rgb(255, 250, 225);
+}
+
+.esquerda{
+    padding-left: 8%;
+}
+
+.meio-da-esquerda{
+    padding-left: 35%;
+    font-size: 129%;
+}
+
+.card{
+    box-shadow: 15px 15px 10px rgba(36, 35, 35, 0.178);
+    border-radius: 15px;
+}
