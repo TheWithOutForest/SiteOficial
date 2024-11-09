@@ -12,7 +12,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // Verificar se o cliente já existe
     $check_sql = $conn->prepare("SELECT * FROM cliente WHERE cpf = ?");
     $check_sql->bind_param("s", $cpf);
-    $check_sql->execute();
+    $check_sql->execute(); 
     $result = $check_sql->get_result();
 
     if ($result->num_rows > 0) {
