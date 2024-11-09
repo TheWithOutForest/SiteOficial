@@ -34,18 +34,29 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/login.css">
     <title>Login</title>
-    <link href="css/styles.css" rel="stylesheet"/>
-    <link href="css/estilo.css" rel="stylesheet"/>
+    <link rel="icon" type="image/x-icon" href="assets/icon.ico"/>
 </head>
 <body>
-    <h1>Login de Cliente</h1>
-    <form method="POST">
-        CPF: <input type="number" name="cpf" required><br>
-        Senha: <input type="password" name="senha" required><br>
-        <input type="submit" value="Entrar">
-    </form>
-    <br>
-    <a href="cadastro_cliente.php">Cadastrar Novo Cliente</a>
+    <a href="index.php"><button class="btn-voltar"><h3>voltar</h3></button></a>
+    <div class="login-container">
+        <div class="login-box">
+            <h2>Login</h2>
+            <form method="POST">
+                <div class="input-group">
+                    <span class="icon">👤</span>
+                    <input type="number" name="cpf" placeholder="CPF" required>
+                </div>
+                <div class="input-group">
+                    <span class="icon">🔒</span>
+                    <input type="password" name="senha" placeholder="Senha" required>
+                </div>
+                <button type="submit" class="btn-login">Entrar</button>
+                <p class="signup-text">Novo cliente? <a href="cadastro_cliente.php">Cadastrar-se</a></p>
+            </form>
+        </div>
+    </div>
 </body>
 </html>
