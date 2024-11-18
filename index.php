@@ -62,6 +62,7 @@ session_start();
         <?php else: ?>
             <a href="login.php" class="btn btn-primary mb-3">Login</a>
             <a href="cadastro_cliente.php" class="btn btn-success mb-3">Cadastrar Cliente</a>
+            <a href="listar.php" class="btn btn-primary mb-3">Listar Cliente</a>
         <?php endif; ?>
     </div>
 
