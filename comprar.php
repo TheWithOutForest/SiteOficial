@@ -1,5 +1,6 @@
 <?php
 include 'conexao.php';
+session_start();
 
 if (isset($_GET['id_fazenda'])) {
     $id_fazenda = $_GET['id_fazenda'];
@@ -76,7 +77,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <form method="POST" class="mx-auto" style="max-width: 500px;">
             <div class="mb-3">
                 <label for="cpf" class="form-label">Cliente (CPF):</label>
-                <input type="number" name="cpf" id="cpf" class="form-control" required>
+                <input type="text" name="cpf" id="cpf" class="form-control" value="<?= isset($_SESSION['cpf']) ? $_SESSION['cpf'] : '' ?>" readonly>
             </div>
             <div class="mb-3">
                 <label for="num_ingresso" class="form-label">Escolha o ingresso:</label>

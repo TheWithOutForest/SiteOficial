@@ -32,7 +32,7 @@ session_start();
                 <ul class="navbar-nav ms-auto py-4 py-lg-0">
                     <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="index.php">Inicial</a></li>
                     <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="sobreEspacos.php">Sobre</a></li>
-                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="agendamento.php">Agendamento</a></li>
+                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="comprar.php">Agendamento</a></li>
                     <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="equipe.php">Equipe</a></li>
                     <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="cadastro_cliente.php">Cadastro</a></li>
                 </ul>
@@ -59,10 +59,11 @@ session_start();
         <?php if (isset($_SESSION['cpf'])): ?>
             <p class="welcome-msg">Bem-vindo, usuário de CPF: <?= $_SESSION['cpf'] ?>!</p>
             <a href="logout.php" class="btn btn-secondary mb-3">Logout</a>
+            <a href="listar.php" class="btn btn-primary mb-3">Listar Cliente</a>
         <?php else: ?>
             <a href="login.php" class="btn btn-primary mb-3">Login</a>
             <a href="cadastro_cliente.php" class="btn btn-success mb-3">Cadastrar Cliente</a>
-            <a href="listar.php" class="btn btn-primary mb-3">Listar Cliente</a>
+
         <?php endif; ?>
     </div>
 
@@ -103,7 +104,7 @@ session_start();
                 <!-- Fazenda Medeiros -->
                 <div class="post-preview">
                     <a href="sobreEspacos.php">
-                        <h2 class="post-title">Fazenda de Medeiros</h2>
+                        <h2 class="post-title">Fazenda Medeiros</h2>
                         <img class="imginicio" src="assets/img/fazenda4medeiros.avif" alt="Fazenda Medeiros">
                         <h3 class="post-subtitle2">A Fazenda Medeiros oferece passeios de bicicleta, oficinas de culinária e um playground natural para as crianças...</h3>
                         <h3 class="post-subtitle">Saiba Mais</h3>
