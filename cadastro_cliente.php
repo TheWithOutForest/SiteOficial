@@ -77,7 +77,7 @@ $conn->close();
 
             <form action="#" method="POST">
                 <div class="input-group">
-                    <input type="number" name="cpf" placeholder="CPF" required>
+                <input type="text" id="cpf" name="cpf" placeholder="123.456.789-09" required>
                 </div>
                 <div class="input-group">
                     <input type="text" name="nome" placeholder="Nome Completo" required>

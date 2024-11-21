@@ -79,6 +79,7 @@ try {
                     <th>CPF</th>
                     <th>Nome</th>
                     <th>Endereço</th>
+                    <th>Telefone</th>
                     <th>Ações</th> <!-- Coluna de Ações -->
                 </tr>
             </thead>
@@ -89,6 +90,7 @@ try {
                             <td><?php echo $cliente['cpf']; ?></td>
                             <td><?php echo $cliente['nome']; ?></td>
                             <td><?php echo $cliente['endereco_cliente']; ?></td>
+                            <td><?php echo $cliente['telefone']; ?></td>
                             <td>
                                 <!-- Botões de Editar e Excluir -->
                                 <a href="update.php?cpf=<?php echo $cliente['cpf']; ?>" class="btn btn-warning btn-sm">Editar</a>
