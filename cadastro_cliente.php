@@ -63,7 +63,6 @@ $conn->close();
 <body>
     <div class="container">
         <div class="left-panel">
-            <a href="login.php"><button type="button" class="btn-voltar"><h3>Voltar</h3></button></a>
             <div class="escrit">
                 <h2>Seja bem-vindo!</h2>
                 <p>Crie sua conta para aproveitar conteúdos exclusivos e se conectar com nossa comunidade!</p>
@@ -77,7 +76,7 @@ $conn->close();
 
             <form action="#" method="POST">
                 <div class="input-group">
-                <input type="text" id="cpf" name="cpf" placeholder="123.456.789-09" required>
+                    <input type="number" name="cpf" placeholder="CPF" required>
                 </div>
                 <div class="input-group">
                     <input type="text" name="nome" placeholder="Nome Completo" required>
@@ -92,7 +91,6 @@ $conn->close();
                     <input type="password" name="senha" placeholder="Senha" required>
                 </div>
                 <input type="submit" value="Cadastrar" class="btn-signup">
-
                 <!-- Exibir mensagem de sucesso ou erro -->
                 <?php if (!empty($message)): ?>
                     <p class="message"><?= $message ?></p>
@@ -100,7 +98,7 @@ $conn->close();
 
                 <!-- Botão para redirecionar após sucesso -->
                 <?php if (isset($success) && $success): ?>
-                    <a href="index.php" class="btn-go-home">Ir para a Página Inicial</a>
+                    <a href="index.php" class="btn-voltar">Ir Para a Página Inicial</a>
                 <?php endif; ?>
             </form>
         </div>

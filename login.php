@@ -40,9 +40,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <link rel="icon" type="image/x-icon" href="assets/icon.ico"/>
 </head>
 <body>
-    <a href="index.php"><button class="btn-voltar"><h3>voltar</h3></button></a>
     <div class="login-container">
         <div class="login-box">
+        <a href="index.php"><button class="btn-voltar">voltar</button></a>
             <h2>Login</h2>
             <form method="POST">
                 <div class="input-group">
