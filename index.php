@@ -35,6 +35,7 @@ session_start();
                     <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="comprar.php">Agendamento</a></li>
                     <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="equipe.php">Equipe</a></li>
                     <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="cadastro_cliente.php">Cadastro</a></li>
+                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="perfil.php">Perfil</a></li>
                 </ul>
             </div>
         </div>
@@ -60,37 +61,47 @@ session_start();
             <p class="welcome-msg">Bem-vindo, usuário de CPF: <?= $_SESSION['cpf'] ?>!</p>
             <a href="logout.php" class="btn btn-secondary mb-3">Logout</a>
             <a href="listar.php" class="btn btn-primary mb-3">Listar Cliente</a>
-            <a href="listar_ingressos.php" class="btn btn-primary mb-3">Listar Ingresso</a>
+            <a href="updated_lista_compras.php" class="btn btn-primary mb-3">Listar Ingresso</a>
         <?php else: ?>
-            <a href="login.php" class="btn btn-primary mb-3">Entrar</a>
-            <a href="cadastro_cliente.php" class="btn btn-success mb-3">Cadastre-se</a>
+            <a href="login.php" class="btn btn-primary mb-3">Login</a>
+            <a href="cadastro_cliente.php" class="btn btn-success mb-3">Cadastrar Cliente</a>
 
         <?php endif; ?>
     </div>
 
     <!-- Seção de Locais com Imagens e Descrições -->
-    <div class="container px-4 px-lg-5">
-        <div class="row gx-4 gx-lg-5 justify-content-center">
-            <div class="col-md-10 col-lg-8 col-xl-7">
                 <!-- Fazenda Soares -->
-                <div class="post-preview">
-                    <a href="sobreEspacos.php">
-                        <h2 class="post-title">Fazenda Soares</h2>
-                        <img class="imginicio" src="assets/img/fazenda1soares.jpg" alt="Fazenda Soares">
-                        <h3 class="post-subtitle2">Na Fazenda Soares, é possível pescar em um lago tranquilo, caminhar pelas trilhas e fazer piqueniques com vistas para os campos...</h3>
-                        <h3 class="post-subtitle">Saiba Mais</h3>
-                    </a>
-                </div>
+                <div class="container">
+  <div class="row">
+    <div class="col-6 col-sm-3">
+    <a href="sobreEspacos.php">
+        <h2 class="post-title">Fazenda Soares</h2>
+            <img class="imginicio" src="assets/img/fazenda1soares.jpg" alt="Fazenda Soares">
+            <h3 class="post-subtitle2">Na Fazenda Soares, é possível pescar em um lago tranquilo, caminhar pelas trilhas e fazer piqueniques com vistas para os campos...</h3>
+        <h3 class="post-subtitle">Saiba Mais</h3>
+    </a>
+    </div>
+
+    <div class="col-6 col-sm-3">
+    <a href="sobreEspacos.php">
+        <h2 class="post-title">Fazenda Estrada</h2>
+            <img class="imginicio" src="assets/img/fazenda2estrada.jpg" alt="Fazenda Estrada">
+            <h3 class="post-subtitle2">A Fazenda Estrada oferece atividades como colheita de frutas frescas, passeios pelas trilhas naturais e interação com animais...</h3>
+        <h3 class="post-subtitle">Saiba Mais</h3>
+    </a>
+    </div>
+
+    <!-- Force next columns to break to new line -->
+    <div class="w-100"></div>
+
+    <div class="col-6 col-sm-3">.col-6 .col-sm-3</div>
+    <div class="col-6 col-sm-3">.col-6 .col-sm-3</div>
+  </div>
+</div>
+                
                 <br>
                 <!-- Fazenda Estrada -->
-                <div class="post-preview">
-                    <a href="sobreEspacos.php">
-                        <h2 class="post-title">Fazenda Estrada</h2>
-                        <img class="imginicio" src="assets/img/fazenda2estrada.jpg" alt="Fazenda Estrada">
-                        <h3 class="post-subtitle2">A Fazenda Estrada oferece atividades como colheita de frutas frescas, passeios pelas trilhas naturais e interação com animais...</h3>
-                        <h3 class="post-subtitle">Saiba Mais</h3>
-                    </a>
-                </div>
+
                 <br>
                 <!-- Fazenda Ramos -->
                 <div class="post-preview">
@@ -113,11 +124,7 @@ session_start();
                 </div>
                 <hr class="my-4" />
                 <div class="d-flex justify-content-end mb-4">
-                    <a class="btn btn-primary text-uppercase" href="#!">Quero conhecer mais</a>
                 </div>
-            </div>
-        </div>
-    </div>
 
     <!-- Rodapé -->
     <footer class="border-top mt-5">
