@@ -13,7 +13,7 @@ CREATE TABLE cliente (
 
 CREATE TABLE ingressos (
     num_ingresso int,
-    valor int,
+    tipo_ingresso varchar(32),
     status boolean,
     dt_hr_compra datetime,
     id_fazenda int,
@@ -42,6 +42,12 @@ CREATE TABLE locais (
     caminho_img VARCHAR(255),
     descricao text
 );
+
+INSERT INTO locais (id_fazenda, nome_fazenda) VALUES
+(1, 'Fazenda Soares'),
+(2, 'Fazenda Estrada'),
+(3, 'Fazenda Ramos'),
+(4, 'Fazenda Medeiros');
 
 CREATE TABLE Relacionamento_1 (
     fk_ingressos_num_ingresso int,

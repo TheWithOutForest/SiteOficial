@@ -42,7 +42,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <body>
     <div class="login-container">
         <div class="login-box">
-        <a href="index.php"><button class="btn-voltar">voltar</button></a>
+        <a href="index.php"><button class="btn-voltar">Voltar</button></a>
             <h2>Login</h2>
             <form method="POST">
                 <div class="input-group">

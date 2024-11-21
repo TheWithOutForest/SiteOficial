@@ -60,10 +60,10 @@ session_start();
             <p class="welcome-msg">Bem-vindo, usuário de CPF: <?= $_SESSION['cpf'] ?>!</p>
             <a href="logout.php" class="btn btn-secondary mb-3">Logout</a>
             <a href="listar.php" class="btn btn-primary mb-3">Listar Cliente</a>
-            <a href="updated_lista_compras.php" class="btn btn-primary mb-3">Listar Ingresso</a>
+            <a href="listar_ingressos.php" class="btn btn-primary mb-3">Listar Ingresso</a>
         <?php else: ?>
-            <a href="login.php" class="btn btn-primary mb-3">Login</a>
-            <a href="cadastro_cliente.php" class="btn btn-success mb-3">Cadastrar Cliente</a>
+            <a href="login.php" class="btn btn-primary mb-3">Entrar</a>
+            <a href="cadastro_cliente.php" class="btn btn-success mb-3">Cadastre-se</a>
 
         <?php endif; ?>
     </div>
