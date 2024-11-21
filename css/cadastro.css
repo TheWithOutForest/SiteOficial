@@ -39,13 +39,11 @@
     cursor: pointer;
     border: none;
     border-radius: 20px;
-    width: 30%;
     transition: background-color 0.3s ease;
     text-align: center;
-    margin-right: 295px;
-    margin-bottom: 150px;
+    text-decoration: none;
   }
-
+  /*<a href="index.php" class="btn-voltar">Página Inicial</a>*/
   .btn-voltar:hover {
     background-color: #ffe9bf;
   }
