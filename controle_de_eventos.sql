@@ -14,7 +14,7 @@ CREATE TABLE cliente (
 CREATE TABLE ingressos (
     num_ingresso int,
     tipo_ingresso varchar(32),
-    status boolean,
+    status varchar(10),
     dt_hr_compra datetime,
     id_fazenda int,
     PRIMARY KEY (num_ingresso, id_fazenda)

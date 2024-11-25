@@ -1,3 +1,8 @@
+<?php
+include 'conexao.php';
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
@@ -16,36 +21,50 @@
         
     </head>
     <body>
-        <nav class="navbar navbar-expand-lg navbar-light" id="mainNav">
-            <div class="container px-4 px-lg-5">
-                <a class="navbar-brand" href="index.php">Os Sem-Floresta</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                    Menu
-                    <i class="fas fa-bars"></i>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav ms-auto py-4 py-lg-0">
-                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="index.php">Inicial</a></li>
-                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="sobreEspacos.php">Sobre</a></li>
-                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="comprar.php">Agendamento</a></li>
-                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="equipe.php">Equipe</a></li>
-                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="cadastro_cliente.php">Cadastro</a></li>
-                    </ul>
-                </div>
+
+<!-- Navegação -->
+<nav class="navbar navbar-expand-lg navbar-light" id="mainNav">
+    <div class="container px-4 px-lg-5">
+        <a class="navbar-brand" href="index.php">Os Sem-Floresta</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            Menu
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ms-auto py-4 py-lg-0">
+                <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="index.php">Inicial</a></li>
+                <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="sobreEspacos.php">Sobre</a></li>
+                <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="comprar.php">Agendamento</a></li>
+                <?php if (isset($_SESSION['cpf'])): ?>
+                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="listar.php">Editar Perfil</a></li>
+                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="updated_lista_compras.php">Ver Ingressos</a></li>
+                <?php endif; ?>
+            </ul>
+            <div class="navbar-login ms-lg-3">
+                <?php if (isset($_SESSION['cpf'])): ?>
+                    <span class="navbar-text">Bem-vindo, <?= $_SESSION['cpf'] ?>!</span>
+                    <a href="logout.php" class="btn btn-secondary btn-sm ms-2">Logout</a>
+                <?php else: ?>
+                    <a href="login.php" class="btn btn-primary btn-sm ms-2">Login</a>
+                    <a href="cadastro_cliente.php" class="btn btn-success btn-sm ms-2">Cadastrar</a>
+                <?php endif; ?>
             </div>
-        </nav>
+        </div>
+    </div>
+</nav>
+
         <header class="masthead" style="background-image: url('assets/img/homesobre.avif')">
             <div class="container position-relative px-4 px-lg-5">
                 <div class="row gx-4 gx-lg-5 justify-content-center">
                     <div class="col-md-10 col-lg-8 col-xl-7">
                         <div class="page-heading">
-                            <h1>ㅤ</h1>
                             <h2>ㅤ</h2>
                             <h2>ㅤ</h2>
-                            <h2>Conheça um pouco mais</h2>
+                            <h2>ㅤ</h2>
+                            <h1>Conheça um pouco mais</h1>
                             <h2>ㅤ</h2>
                             <h2>ㅤ</h2>
-                            <h1>ㅤ</h1>
+                            <h2>ㅤ</h2>
                         </div>
                     </div>
                 </div>
@@ -304,35 +323,33 @@
           </div>
           </section>
           
-<!-- Footer -->
-
-        <footer class="border-top">
-            <div class="container px-4 px-lg-5">
-                <div class="row gx-4 gx-lg-5 justify-content-center">
-                    <div class="col-md-10 col-lg-8 col-xl-7">
-                        <ul class="list-inline text-center">
-                            <li class="list-inline-item">
-                                <a href="https://www.instagram.com/the_without_forest/">
-                                    <span class="fa-stack fa-lg">
-                                        <i class="fas fa-circle fa-stack-2x"></i>
-                                        <img src="assets/img/instaicon.png" class="fa-stack-1x" alt="GitHub Icon" style="width: 70%; height: 70%; object-fit: contain;">
-                                    </span>
-                                </a>
-                            </li>
-                            <li class="list-inline-item">
-                                <a href="https://github.com/TheWithOutForest">
-                                    <span class="fa-stack fa-lg">
-                                        <i class="fas fa-circle fa-stack-2x"></i>
-                                        <i class="fab fa-github fa-stack-1x fa-inverse"></i>
-                                    </span>
-                                </a>
-                            </li>
-                        </ul>
-                        <div class="small text-center text-muted fst-italic">Copyright &copy; Developed by Lucas Martins, Pedro Henrique, Tiago Estrada, Vinícius Ramos e Wesley Mendes</div>
-                    </div>
+<footer class="border-top mt-5 bg-light py-4">
+    <div class="container px-4 px-lg-5">
+        <div class="row justify-content-center text-center">
+            <div class="col-md-12 mt-3">
+                <div class="small text-muted fst-italic">
+                    <p>© Desenvolvido por Lucas Martins, Pedro Henrique, Tiago Estrada, Vinícius Ramos e Wesley Mendes</p>
+                    <p>Alguma dúvida? Entre em contato conosco</p>
                 </div>
             </div>
-        </footer>
+        </div>
+        <div class="row align-items-center mt-4">
+            <div class="col-lg-4 text-lg-start">
+                <p>Os Sem Floresta</p>
+            </div>
+            <div class="col-lg-4 my-3 my-lg-0 text-center">
+                <a class="btn btn-dark btn-social mx-2" href="https://github.com/TheWithOutForest" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a class="btn btn-dark btn-social mx-2" href="https://www.instagram.com/the_without_forest/" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+            <div class="col-lg-4 text-lg-end">
+            </div>
+        </div>
+    </div>
+</footer>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
         <script src="js/scripts.js"></script>
     </body>

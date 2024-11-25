@@ -27,3 +27,148 @@
 .post-title5{
     padding-top: 14%;
 }
+
+.navbar-login {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.navbar-login .navbar-text {
+    font-size: 14px;
+    color: white;
+}
+
+.navbar-login a.btn {
+    font-size: 12px;
+    padding: 5px 10px;
+    border-radius: 20px;
+}
+
+@media (max-width: 992px) {
+    .navbar-login {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 10px;
+    }
+
+    .navbar-login .btn {
+        margin-top: 5px;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+.navbar-login .btn {
+    background-color: white !important; 
+    color: #000 !important;          
+    border: 1px solid #ccc;           
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar-login .btn:hover {
+    background-color: #f0f0f0 !important; 
+    color: #000 !important;              
+}
+
+.card {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.card-img-top {
+    border-bottom: 1px solid #ddd;
+    max-height: 200px;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 15px;
+    text-align: center;
+}
+
+.card-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.card-text {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.btn {
+    background-color: #FFC107; 
+    color: #5D4037; 
+    border: none;
+    border-radius: 20px;
+    padding: 5px 15px;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background-color: #FFB300; 
+    color: #4E342E; 
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.row{
+    padding-top: 30px;
+}
+
+.welcome-msg {
+    color: white !important;
+}
+
+.navbar-text{
+    color: white;
+}
+
+footer {
+    background-image: url('footerimg'); /* Imagem de fundo */
+    background-size: cover;            /* Ajusta a imagem ao tamanho */
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fff;
+    padding: 1rem 0;                   /* Reduz o padding geral */
+    font-family: Arial, sans-serif;
+}
+
+footer .row {
+    margin-bottom: 0.5rem;             /* Reduz o espaçamento entre linhas */
+}
+
+footer .col-lg-4 {
+    margin-bottom: 0.5rem;             /* Diminui o espaçamento vertical entre as colunas */
+}
+
+footer .small {
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.2;                  /* Mantém o texto legível, mas reduz o espaçamento */
+}
+
+footer .btn-social {
+    margin: 0 0.3rem;                  /* Ajusta o espaçamento horizontal entre os botões */
+}
+
+footer p {
+    margin-bottom: 0.3rem;             /* Reduz o espaçamento entre os parágrafos */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    footer {
+        text-align: center;
+        padding: 0.8rem 0;             /* Reduz o padding no mobile */
+    }
+
+    footer .col-lg-4 {
+        margin-bottom: 0.3rem;
+    }
+}
+
+    

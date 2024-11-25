@@ -46,35 +46,48 @@ if ($result->num_rows > 0) {
 </head>
 
 <body>
-    <!-- Navegação -->
-    <nav class="navbar navbar-expand-lg navbar-light" id="mainNav">
-        <div class="container px-4 px-lg-5">
-            <a class="navbar-brand" href="index.php">Os Sem-Floresta</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                Menu
-                <i class="fas fa-bars"></i>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav ms-auto py-4 py-lg-0">
-                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="index.php">Inicial</a></li>
-                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="sobreEspacos.php">Sobre</a></li>
-                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="comprar.php">Agendamento</a></li>
-                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="equipe.php">Equipe</a></li>
-                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="cadastro_cliente.php">Cadastro</a></li>
-                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="listar_ingressos.php">Meus Ingressos</a></li> <!-- Link para listar ingressos -->
-                </ul>
+<nav class="navbar navbar-expand-lg navbar-light" id="mainNav">
+    <div class="container px-4 px-lg-5">
+        <a class="navbar-brand" href="index.php">Os Sem-Floresta</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            Menu
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ms-auto py-4 py-lg-0">
+                <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="index.php">Inicial</a></li>
+                <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="sobreEspacos.php">Sobre</a></li>
+                <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="comprar.php">Agendamento</a></li>
+                <?php if (isset($_SESSION['cpf'])): ?>
+                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="listar.php">Editar Perfil</a></li>
+                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="updated_lista_compras.php">Ver Ingressos</a></li>
+                <?php endif; ?>
+            </ul>
+            <div class="navbar-login ms-lg-3">
+                <?php if (isset($_SESSION['cpf'])): ?>
+                    <span class="navbar-text">Bem-vindo, <?= $_SESSION['cpf'] ?>!</span>
+                    <a href="logout.php" class="btn btn-secondary btn-sm ms-2">Logout</a>
+                <?php else: ?>
+                    <a href="login.php" class="btn btn-primary btn-sm ms-2">Login</a>
+                    <a href="cadastro_cliente.php" class="btn btn-success btn-sm ms-2">Cadastrar</a>
+                <?php endif; ?>
             </div>
         </div>
-    </nav>
+    </div>
+</nav>
 
-    <!-- Cabeçalho -->
-    <header class="masthead" style="background-image: url('assets/img/home.jpg')">
+    <header class="masthead" style="background-image: url('assets/img/fazenda2estrada2.jpg')">  
         <div class="container position-relative px-4 px-lg-5">
             <div class="row gx-4 gx-lg-5 justify-content-center">
                 <div class="col-md-10 col-lg-8 col-xl-7">
                     <div class="site-heading">
+                        <h1>ㅤ</h1>
                         <h1>Meus Ingressos</h1>
                         <h2>Confira todos os ingressos comprados</h2>
+                        <h1>ㅤ</h1>
+                        <h2>ㅤ</h2>
+                        <h2>ㅤ</h2>
+                        <h2>ㅤ</h2>
                     </div>
                 </div>
             </div>
@@ -115,6 +128,71 @@ if ($result->num_rows > 0) {
             </tbody>
         </table>
     </div>
+
+<style>
+        @media (max-width: 768px) {
+        table {
+            width: 100%;
+            font-size: 0.9rem; 
+        }
+        
+        table th, table td {
+            padding: 8px; 
+        }
+
+        .btn {
+            padding: 8px 16px; 
+            font-size: 0.9rem; 
+        }
+
+        h1 {
+            font-size: 1.75rem;
+        }
+    }
+
+    @media (max-width: 480px) {
+        table th, table td {
+            font-size: 0.8rem;
+        }
+        
+        .btn {
+            padding: 7px 14px;
+        }
+        
+        h1 {
+            font-size: 1.5rem; 
+        }
+    }
+</style>
+
+<footer class="border-top mt-5 bg-light py-4">
+    <div class="container px-4 px-lg-5">
+        <div class="row justify-content-center text-center">
+            <div class="col-md-12 mt-3">
+                <div class="small text-muted fst-italic">
+                    <p>© Desenvolvido por Lucas Martins, Pedro Henrique, Tiago Estrada, Vinícius Ramos e Wesley Mendes</p>
+                    <p>Alguma dúvida? Entre em contato conosco</p>
+                </div>
+            </div>
+        </div>
+        <div class="row align-items-center mt-4">
+            <div class="col-lg-4 text-lg-start">
+                <p>Os Sem Floresta</p>
+            </div>
+            <div class="col-lg-4 my-3 my-lg-0 text-center">
+                <a class="btn btn-dark btn-social mx-2" href="https://github.com/TheWithOutForest" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a class="btn btn-dark btn-social mx-2" href="https://www.instagram.com/the_without_forest/" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+            <div class="col-lg-4 text-lg-end">
+                <a class="link-dark text-decoration-none" href="#!">Termos de Uso</a>
+            </div>
+        </div>
+    </div>
+</footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/scripts.js"></script>

@@ -19,7 +19,7 @@ session_start();
             <h2>Login</h2>
             <form method="POST" action="">
                 <div class="input-group">
-                    <span class="icon">👤</span>
+                    <span class="icon"></span>
                     <input type="number" name="cpf" placeholder="CPF" required>
                 </div>
                 <div class="input-group">

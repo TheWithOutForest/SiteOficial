@@ -62,7 +62,9 @@ if (isset($_GET['cpf'])) {
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
     <title>Editar Cliente</title>
+    <link rel="icon" type="image/x-icon" href="assets/icon.ico"/>
     <link href="css/styles.css" rel="stylesheet"/>
+
 </head>
 <body>
     <div class="container mt-5">
@@ -90,3 +92,103 @@ if (isset($_GET['cpf'])) {
     </div>
 </body>
 </html>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+.container {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    max-width: 600px;
+    margin: auto;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #444;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 5px;
+    display: block;
+}
+
+input.form-control {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 100%;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+input.form-control:focus {
+    border-color: #FFC107; 
+    outline: none;
+}
+
+button.btn-primary {
+    background-color: #FFC107; 
+    border: none;
+    padding: 12px 20px;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+    width: 100%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button.btn-primary:hover {
+    background-color: #FFC107; 
+}
+
+button.btn-secondary {
+    background-color: #6c757d;
+    border: none;
+    padding: 12px 20px;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+button.btn-secondary:hover {
+    background-color: #495057;
+}
+
+@media (max-width: 576px) {
+    .container {
+        padding: 20px;
+    }
+
+    button.btn-primary, button.btn-secondary {
+        width: 100%;
+    }
+}
+
+</style>

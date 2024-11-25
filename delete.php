@@ -59,7 +59,6 @@ $conn->close();
 </head>
 
 <body>
-    <!-- Navegação -->
     <nav class="navbar navbar-expand-lg navbar-light" id="mainNav">
         <div class="container px-4 px-lg-5">
             <a class="navbar-brand" href="index.php">Os Sem-Floresta</a>
@@ -79,7 +78,6 @@ $conn->close();
         </div>
     </nav>
 
-    <!-- Cabeçalho -->
     <header class="masthead" style="background-image: url('assets/img/home.jpg')">
         <div class="container position-relative px-4 px-lg-5">
             <div class="row gx-4 gx-lg-5 justify-content-center">
@@ -117,7 +115,6 @@ $conn->close();
         <a href="listar.php" class="btn btn-secondary mt-3">Voltar para a Lista</a>
     </div>
 
-    <!-- Rodapé -->
     <footer class="border-top mt-5">
         <div class="container px-4 px-lg-5">
             <div class="row gx-4 gx-lg-5 justify-content-center">

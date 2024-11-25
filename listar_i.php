@@ -86,14 +86,12 @@ while ($row = $result->fetch_assoc()) {
     }
 </script>
 <Style>
-    /* Resetando alguns estilos padrões */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Corpo da página */
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
@@ -101,7 +99,6 @@ body {
     padding: 20px;
 }
 
-/* Container principal */
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -111,13 +108,11 @@ body {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Título */
 h1 {
     text-align: center;
     margin-bottom: 20px;
 }
 
-/* Estilo da tabela */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -143,7 +138,6 @@ tr:nth-child(even) {
     background-color: #f2f2f2;
 }
 
-/* Botões de ação */
 button {
     padding: 8px 12px;
     margin: 5px;
@@ -170,7 +164,6 @@ button {
     background-color: #e53935;
 }
 
-/* Responsividade */
 @media (max-width: 768px) {
     table {
         font-size: 14px;
@@ -184,5 +177,4 @@ button {
         font-size: 12px;
     }
 }
-
 </Style>
