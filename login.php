@@ -1,26 +1,6 @@
 <?php
 include 'conexao.php';
 session_start();
-
-if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['entrar'])) {
-    $cpf = $_POST['cpf'];
-    $senha = $_POST['senha'];
-
-    // Consulta ao banco de dados (valide o SQL para prevenir SQL Injection)
-    $query = "SELECT * FROM usuarios WHERE cpf = ? AND senha = ?";
-    $stmt = $conn->prepare($query);
-    $stmt->bind_param("ss", $cpf, $senha);
-    $stmt->execute();
-    $result = $stmt->get_result();
-
-    if ($result->num_rows > 0) {
-        $_SESSION['usuario'] = $result->fetch_assoc(); // Salva o usuário na sessão
-        header('Location: painel.php'); // Redireciona para o painel do usuário
-        exit;
-    } else {
-        $erro = "CPF ou senha inválidos.";
-    }
-}
 ?>
 
 <!DOCTYPE html>
@@ -37,10 +17,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['entrar'])) {
     <div class="login-box">
         <a href="index.php"><button class="btn-voltar">Voltar</button></a>
         <h2 class="logintexto">Login</h2>
+
         <!-- Mensagem de erro exibida aqui -->
         <?php if (isset($erro)): ?>
             <div class="error-msg"><?php echo htmlspecialchars($erro); ?></div>
         <?php endif; ?>
+
         <form method="POST" action="">
             <div class="input-group">
                 <span class="icon"></span>
@@ -53,10 +35,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['entrar'])) {
             <button type="submit" name="entrar" class="btn-login">Entrar</button>
             <p class="signup-text">Novo cliente? <a href="cadastro_cliente.php">Cadastrar-se</a></p>
         </form>
-    </div>
-</div>
 
-    <?php
+        <?php
                 // Verifica se o formulário foi submetido
                 if (isset($_POST['entrar'])) {
                     $cpf = $_POST['cpf'];
@@ -92,8 +72,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['entrar'])) {
                     // Fecha o statement
                     $stmt->close();
                 }
-            ?>
-    
+        ?>
+
+    </div>
+</div>
 </body>
 </html>
-

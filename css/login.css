@@ -45,7 +45,7 @@ body {
 }
 
 .btn-voltar:hover {
-  background-color: #FFC107;
+  background-color: #e0a800;
 }
 
 /* Título do formulário */
@@ -124,7 +124,7 @@ h2 {
 }
 
 .btn-login:hover {
-  background-color: #FFC107;
+  background-color: #e0a800;
 }
 
 .logintexto{

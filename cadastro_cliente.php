@@ -66,10 +66,9 @@ $conn->close();
         <!-- Painel esquerdo com mensagem de boas-vindas -->
         <aside class="left-panel">
             <div class="welcome-message">
+                <a href="index.php"><button class="btn-voltar">Voltar</button></a>
                 <h2>Seja bem-vindo!</h2>
-                <p>Crie sua conta para aproveitar conteúdos exclusivos e se conectar com nossa comunidade!</p>
-                <a href="login.php">
-                    <button class="btn-signin">LOGIN</button>
+                <p class="msgcrie">Crie sua conta para poder realizar seu primeiro agendamento no nosso site!</p>
                 </a>
             </div>
         </aside>
@@ -77,7 +76,6 @@ $conn->close();
         <!-- Painel direito com formulário de cadastro -->
         <section class="right-panel">
             <h2 class="txtlogin">Criar conta</h2>
-            <p>Use seu e-mail para o registro:</p>
 
             <form action="#" method="POST">
                 <div class="input-group">
@@ -109,7 +107,7 @@ $conn->close();
 
                 <!-- Botão para redirecionar após sucesso -->
                 <?php if (isset($success) && $success): ?>
-                    <a href="index.php" class="btn-voltar">Ir Para a Página Inicial</a>
+                    <a href="login.php" class="btn-voltar">Ir Para a Tela de Login</a>
                 <?php endif; ?>
             </form>
         </section>
