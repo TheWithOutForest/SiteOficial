@@ -73,6 +73,7 @@ session_start();
                 <div class="card-body">
                     <h5 class="card-title">Fazenda Soares</h5>
                     <p class="card-text">Localizada em um vale tranquilo, a Fazenda Soares é o destino ideal para quem busca contato com a natureza. A fazenda possui um lago para pesca esportiva, trilhas ecológicas que atravessam áreas de mata nativa e locais perfeitos para piqueniques com vistas deslumbrantes dos campos ao redor. </p>
+                    <p>Sorocaba - SP</p>
                     <a href="sobreEspacos.php" class="btn btn-primary btn-sm">Saiba Mais</a>
                 </div>
             </div>
@@ -85,6 +86,7 @@ session_start();
                 <div class="card-body">
                     <h5 class="card-title">Fazenda Estrada</h5>
                     <p class="card-text">Conhecida por suas plantações, a Fazenda Estrada oferece a experiência única de colher frutas frescas diretamente do pomar. Além disso, conta com trilhas naturais que revelam paisagens incríveis e uma área especial para interação com animais como coelhos, galinhas e ovelhas. Um passeio educativo e divertido para todas as idades.</p>
+                    <p>Atibaia - SP</p>
                     <a href="sobreEspacos.php" class="btn btn-primary btn-sm">Saiba Mais</a>
                 </div>
             </div>
@@ -97,6 +99,7 @@ session_start();
                 <div class="card-body">
                     <h5 class="card-title">Fazenda Ramos</h5>
                     <p class="card-text">A Fazenda Ramos combina tradição rural e diversão. Os visitantes podem participar de passeios a cavalo por áreas panorâmicas, aprender técnicas de cultivo sustentável em oficinas de plantio e aproveitar momentos de lazer ao lado de animais de fazenda. É uma experiência completa para quem deseja explorar a vida no campo.</p>
+                    <p>Suzano - SP</p>
                     <a href="sobreEspacos.php" class="btn btn-primary btn-sm">Saiba Mais</a>
                 </div>
             </div>
@@ -109,6 +112,7 @@ session_start();
                 <div class="card-body">
                     <h5 class="card-title">Fazenda Medeiros</h5>
                     <p class="card-text">Com foco em atividades ao ar livre, a Fazenda Medeiros oferece uma experiência interativa para toda a família. Passeios de bicicleta por trilhas exclusivas, oficinas de culinária com ingredientes colhidos no local e um playground natural com tirolesa e escalada para crianças são algumas das atrações. Ideal para quem busca aventura.</p>
+                    <p>Guarulhos - SP</p>
                     <a href="sobreEspacos.php" class="btn btn-primary btn-sm">Saiba Mais</a>
                 </div>
             </div>
